@@ -9,28 +9,26 @@ public class СombineHarvester {
     private String color;
     private int wheels;
 
+    private static int heightInMeters;
+
     protected String name;
     protected int numberOfSeats;
 
-    private static int heightInMeters;
-
-
-
     public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,
-                            String name, int numberOfSeats, int heightInMeters) {
+                            int heightInMeters, String name, int numberOfSeats) {
         this.volumGrainInKg = volumGrainInKg;
         this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
         this.enginePowerHorsepower = enginePowerHorsepower;
         this.color = color;
         this.wheels = wheels;
+        СombineHarvester.heightInMeters = heightInMeters;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
-        СombineHarvester.heightInMeters = heightInMeters;
     }
 
 
     public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color) {
-        this(volumGrainInKg, fuelConsumptionPerHectareInLiters, enginePowerHorsepower, color, 0, null, 0, 0);
+        this(volumGrainInKg, fuelConsumptionPerHectareInLiters, enginePowerHorsepower, color, 0, 0, null, 0);
     }
 
     public СombineHarvester(){
@@ -92,13 +90,6 @@ public class СombineHarvester {
         this.numberOfSeats = numberOfSeats;
     }
 
-    public String printHeightInMeters(){
-        return "Height = " + heightInMeters;
-    }
-    public static String printStaticHeightInMeters(){
-        return "Static Height = " + heightInMeters;
-    }
-
 
     @Override
     public String toString() {
@@ -108,20 +99,26 @@ public class СombineHarvester {
                 ", enginePowerHorsepower=" + enginePowerHorsepower +
                 ", color='" + color + '\'' +
                 ", wheels=" + wheels +
-                ", name='" + name + '\''  + ", numberOfSeats=" + numberOfSeats + ", Height=" +
-                heightInMeters + '}';
+                ", name='" + name + '\''  + ", numberOfSeats=" + numberOfSeats + '}';
     }
 
-    public void resetValues(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,
-                                      String name, int numberOfSeats, int heightInMeters) {
+    public String printHeightInMeters(){
+        return "Height = " + heightInMeters;
+    }
+    public static String printStaticHeightInMeters(){
+        return "Static Height = " + heightInMeters;
+    }
+
+    public void resetValues(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels, int heightInMeters,
+                                      String name, int numberOfSeats) {
         this.volumGrainInKg = volumGrainInKg;
         this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
         this.enginePowerHorsepower = enginePowerHorsepower;
         this.color = color;
         this.wheels = wheels;
+        СombineHarvester.heightInMeters = heightInMeters;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
-        СombineHarvester.heightInMeters = heightInMeters;
     }
 
 }

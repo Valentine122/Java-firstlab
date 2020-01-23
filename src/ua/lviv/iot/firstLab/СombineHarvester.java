@@ -18,7 +18,7 @@ public class СombineHarvester {
 
     protected int numberOfSeats;
 
-    public static int heightOfKombain;
+    private static int heightOfKombain;
 
 
     public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,

@@ -1,16 +1,16 @@
 package ua.lviv.iot.firstLab;
 
-public class Kombain {
+public class СombineHarvester {
 
-    public static final int Default_NUMBEROFSEATS = 1;
+    public static final int DEFAULT_NUMBER_OF_SEATS = 1;
 
-    private double volumZernaInKg;
+    private double volumGrainInKg;
 
-    private double vitrataPalneInLiters;
+    private double fuelConsumptionPerHectareInLiters;
 
-    private int speedInKinskiSulu;
+    private int enginePowerHorsepower;
 
-    private String colorOfKombain;
+    private String color;
 
     private int wheels;
 
@@ -20,59 +20,60 @@ public class Kombain {
 
     public static int heightOfKombain;
 
-    public Kombain(double volumZernaInKg, double vitrataPalneInLiters, int speedInKinskiSulu, String colorOfKombain, int wheels,
-                   String name, int numberOfSeats) {
-        this.volumZernaInKg = volumZernaInKg;
-        this.vitrataPalneInLiters = vitrataPalneInLiters;
-        this.speedInKinskiSulu = speedInKinskiSulu;
-        this.colorOfKombain = colorOfKombain;
+
+    public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,
+                            String name, int numberOfSeats) {
+        this.volumGrainInKg = volumGrainInKg;
+        this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
+        this.enginePowerHorsepower = enginePowerHorsepower;
+        this.color = color;
         this.wheels = wheels;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
     }
 
-    public Kombain(double volumZernaInKg, double vitrataPalneInLiters, int speedInKinskiSulu, String colorOfKombain, int wheels, String name) {
-        this(volumZernaInKg, vitrataPalneInLiters, speedInKinskiSulu, colorOfKombain, wheels, name, Default_NUMBEROFSEATS);
+    public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels, String name) {
+        this(volumGrainInKg, fuelConsumptionPerHectareInLiters, enginePowerHorsepower, color, wheels, name, DEFAULT_NUMBER_OF_SEATS);
     }
 
-    public Kombain(double volumZernaInKg, double vitrataPalneInLiters, int speedInKinskiSulu, String colorOfKombain) {
-        this(volumZernaInKg, vitrataPalneInLiters, speedInKinskiSulu, colorOfKombain, 0, null, Default_NUMBEROFSEATS);
+    public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color) {
+        this(volumGrainInKg, fuelConsumptionPerHectareInLiters, enginePowerHorsepower, color, 0, null, DEFAULT_NUMBER_OF_SEATS);
     }
 
-    public Kombain(){
+    public СombineHarvester(){
 
     }
 
-    public double getVolumZernaInKg() {
-        return volumZernaInKg;
+    public double getVolumGrainInKg() {
+        return volumGrainInKg;
     }
 
-    public void setVolumZernaInKg(double volumZernaInKg) {
-        this.volumZernaInKg = volumZernaInKg;
+    public void setVolumGrainInKg(double volumGrainInKg) {
+        this.volumGrainInKg = volumGrainInKg;
     }
 
-    public double getVitrataPalneInLiters() {
-        return vitrataPalneInLiters;
+    public double getFuelConsumptionPerHectareInLiters() {
+        return fuelConsumptionPerHectareInLiters;
     }
 
-    public void setVitrataPalneInLiters(double vitrataPalneInLiters) {
-        this.vitrataPalneInLiters = vitrataPalneInLiters;
+    public void setFuelConsumptionPerHectareInLiters(double fuelConsumptionPerHectareInLiters) {
+        this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
     }
 
-    public int getSpeedInKinskiSulu() {
-        return speedInKinskiSulu;
+    public int getEnginePowerHorsepower() {
+        return enginePowerHorsepower;
     }
 
-    public void setSpeedInKinskiSulu(int speedInKinskiSulu) {
-        this.speedInKinskiSulu = speedInKinskiSulu;
+    public void setEnginePowerHorsepower(int enginePowerHorsepower) {
+        this.enginePowerHorsepower = enginePowerHorsepower;
     }
 
-    public String getColorOfKombain() {
-        return colorOfKombain;
+    public String getColor() {
+        return color;
     }
 
-    public void setColorOfKombain(String colorOfKombain) {
-        this.colorOfKombain = colorOfKombain;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getWheels() {
@@ -103,25 +104,26 @@ public class Kombain {
         return heightOfKombain;
     }
 
+
     @Override
     public String toString() {
-        return "Kombain{" +
-                "volumZernaInKg=" + volumZernaInKg +
-                ", vitrataPalneInLiters=" + vitrataPalneInLiters +
-                ", speedInKinskiSulu=" + speedInKinskiSulu +
-                ", colorOfKombain='" + colorOfKombain + '\'' +
+        return "СombineHarvester{" +
+                "volumGrainInKg=" + volumGrainInKg +
+                ", fuelConsumptionPerHectareInLiters=" + fuelConsumptionPerHectareInLiters +
+                ", enginePowerHorsepower=" + enginePowerHorsepower +
+                ", color='" + color + '\'' +
                 ", wheels=" + wheels +
                 ", name='" + name + '\'' +
                 ", numberOfSeats=" + numberOfSeats + "" +
                 heightOfKombain + '}';
     }
 
-    public void resetKombain(double volumZernaInKg, double vitrataPalneInLiters, int speedInKinskiSulu, String colorOfKombain, int wheels,
+    public void resetСombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,
                             String name, int numberOfSeats, int heightOfKombain) {
-        this.volumZernaInKg = volumZernaInKg;
-        this.vitrataPalneInLiters = vitrataPalneInLiters;
-        this.speedInKinskiSulu = speedInKinskiSulu;
-        this.colorOfKombain = colorOfKombain;
+        this.volumGrainInKg = volumGrainInKg;
+        this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
+        this.enginePowerHorsepower = enginePowerHorsepower;
+        this.color = color;
         this.wheels = wheels;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
